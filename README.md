@@ -14,7 +14,7 @@ Docker powered mini-Heroku. The smallest PaaS implementation you've ever seen.
 
 ## Sponsors
 
-Become a sponsor and get your logo on our README on Github with a link to your site. [[Become a sponsor](https://opencollective.com/dokku#sponsor)]
+Become a sponsor and get your logo on our README on GitHub with a link to your site. [[Become a sponsor](https://opencollective.com/dokku#sponsor)]
 
 <a href="https://opencollective.com/dokku/sponsor/0/website" target="_blank"><img src="https://opencollective.com/dokku/sponsor/0/avatar.svg"></a>
 <a href="https://opencollective.com/dokku/sponsor/1/website" target="_blank"><img src="https://opencollective.com/dokku/sponsor/1/avatar.svg"></a>
@@ -86,7 +86,7 @@ Support us with a monthly donation and help us continue our activities. [[Become
 
 A fresh VM running any of the following operating systems:
 
-- Ubuntu 16.04/18.04/20.04 x64 - Any currently supported release
+- Ubuntu 18.04/20.04 x64 - Any currently supported release
 - Debian 9+ x64
 - CentOS 7 x64 *(experimental)*
 - Arch Linux x64 *(experimental)*
@@ -99,8 +99,8 @@ Otherwise, you will need to import the keypair manually after installation using
 To install the latest stable release, run the following commands as a user who has access to `sudo`:
 
 ```shell
-wget https://raw.githubusercontent.com/dokku/dokku/v0.24.9/bootstrap.sh
-sudo DOKKU_TAG=v0.24.9 bash bootstrap.sh
+wget https://raw.githubusercontent.com/dokku/dokku/v0.24.10/bootstrap.sh
+sudo DOKKU_TAG=v0.24.10 bash bootstrap.sh
 ```
 
 You can then proceed to the ip address or domain name associated with your server to complete the web-based installation.
@@ -117,11 +117,11 @@ Full documentation - including advanced installation docs - are available online
 
 ## Support
 
-You can use [Github Issues](https://github.com/dokku/dokku/issues), check [Troubleshooting](https://dokku.com/docs/getting-started/troubleshooting/) in the documentation, or join us on [freenode in #dokku](https://webchat.freenode.net/?channels=%23dokku).
+You can use [GitHub Issues](https://github.com/dokku/dokku/issues), check [Troubleshooting](https://dokku.com/docs/getting-started/troubleshooting/) in the documentation, or join us on [freenode in #dokku](https://webchat.freenode.net/?channels=%23dokku).
 
 ## Contribution
 
-After checking [Github Issues](https://github.com/dokku/dokku/issues), the [Troubleshooting Guide](https://dokku.com/docs/getting-started/troubleshooting/) or having a chat with us on [freenode in #dokku](https://webchat.freenode.net/?channels=%23dokku), feel free to fork and create a Pull Request.
+After checking [GitHub Issues](https://github.com/dokku/dokku/issues), the [Troubleshooting Guide](https://dokku.com/docs/getting-started/troubleshooting/) or having a chat with us on [freenode in #dokku](https://webchat.freenode.net/?channels=%23dokku), feel free to fork and create a Pull Request.
 
 While we may not merge your PR as is, they serve to start conversations and improve the general Dokku experience for all users.
 

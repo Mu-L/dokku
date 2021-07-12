@@ -391,7 +391,7 @@ fn-git-clone() {
   fi
 
   dokku_log_info1_quiet "Cloning $APP from $GIT_REMOTE#$GIT_REF"
-  trap 'rm -rf $APP_CLONE_ROOT > /dev/null' RETURN INT TERM EXIT
+  trap "rm -rf '$APP_CLONE_ROOT' > /dev/null" RETURN INT TERM EXIT
 
   is_ref=true
   if GIT_TERMINAL_PROMPT=0 git clone --depth 1 -n --branch "$GIT_REF" "$GIT_REMOTE" "$APP_CLONE_ROOT" 2>/dev/null; then
@@ -421,6 +421,7 @@ fn-git-clone() {
 
   rsync -a "$APP_CLONE_ROOT/.git/" "$APP_ROOT"
   fn-git-create-hook "$APP"
+  fn-git-cmd "$APP_CLONE_ROOT" config --add core.bare true
 }
 
 fn-git-cmd() {
@@ -459,6 +460,8 @@ fn-git-fetch() {
     GIT_TERMINAL_PROMPT=0 fn-git-cmd "$APP_ROOT" fetch --update-head-ok remote
     fn-git-cmd "$APP_ROOT" update-ref "refs/heads/$DOKKU_DEPLOY_BRANCH" "$GIT_REF"
   fi
+
+  fn-git-cmd "$APP_ROOT" config --add core.bare true
 }
 
 fn-git-last-updated-at() {
